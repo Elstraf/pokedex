@@ -5,7 +5,9 @@ export default function Header() {
   const random = Math.floor(Math.random() * 154) + 1;
   return (
     <nav className={Styles.navContainer}>
-      <h1>Pokedex</h1>
+      <Link href="/">
+        <h1>Pokedex</h1>
+      </Link>
 
       <div className={Styles.linkContainer}>
         <Link href="/">List View</Link>
