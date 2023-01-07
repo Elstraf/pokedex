@@ -30,8 +30,6 @@ export default function Home() {
       </Head>
       <main>
         <Container>
-          <h1>Pokedex</h1>
-
           <RenderPokemon pokemon={pokemonQuery.data.results} />
         </Container>
       </main>

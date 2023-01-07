@@ -1,4 +1,5 @@
 import axios from "axios";
+import Link from "next/link";
 import { useQuery } from "react-query";
 
 import Styles from "./index.module.scss";
@@ -21,7 +22,7 @@ export default function Card({ name, url }: { name: string; url: string }) {
 
   if (data) {
     return (
-      <a href="https://google.com">
+      <Link href={`/${data?.data.id}`}>
         <div className={Styles.cardBase}>
           <div className={`${Styles.innerCardBase} ${Styles[type]}`}>
             <div className={Styles.basicInfo}>
@@ -62,7 +63,7 @@ export default function Card({ name, url }: { name: string; url: string }) {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     );
   }
 
