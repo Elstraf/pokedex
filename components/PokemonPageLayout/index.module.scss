@@ -4,6 +4,7 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .headerInfo {
@@ -17,9 +18,16 @@
 .imageContainer {
   img {
     height: 400px;
-    width: 400px;
+    width: 300px;
     margin: 0 auto;
     // object-fit: cover;
+  }
+
+  @media (min-width: 768px) {
+    img {
+      height: 400px;
+      width: 400px;
+    }
   }
 }
 

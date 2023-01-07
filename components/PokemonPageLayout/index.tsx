@@ -22,23 +22,21 @@ export default function PokemonPageLayout({
       </div>
 
       <div className={Styles.statsContainer}>
-        {stats.map((stats: any) => {
+        {stats.map((stats: any, index: number) => {
           return (
-            <>
-              <div>
-                <div className={Styles.stats}>
-                  <h3>{stats.stat.name}</h3>
+            <div key={index}>
+              <div className={Styles.stats}>
+                <h3>{stats.stat.name}</h3>
 
-                  <h3>{stats.base_stat}</h3>
-                </div>
-                <div className={Styles.skillBarContainer}>
-                  <div
-                    style={{ width: `${stats.base_stat / 1.5}%` }}
-                    className={Styles.skillBar}
-                  />
-                </div>
+                <h3>{stats.base_stat}</h3>
               </div>
-            </>
+              <div className={Styles.skillBarContainer}>
+                <div
+                  style={{ width: `${stats.base_stat / 1.5}%` }}
+                  className={Styles.skillBar}
+                />
+              </div>
+            </div>
           );
         })}
       </div>
